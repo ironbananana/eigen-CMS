@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,29 +11,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
+
 <body id="index">
 
     <div class="registerbox">
         <div id="registerText"><b>Registeren</b></div>
         <div class="registerInputs">
-          Voornaam  <input type="text" name="vnaam" required minlength="3">
-          <br>
-          <br>
-          Achternaam  <input type="text" name="anaam" required minlength="3">
-          <br>
-          <br>
-          Tel Nr  <input type="number" name="anaam" required maxlength="10">
-          <br>
-          <br>
-          Email  <input type="text" name="emailRegisteren" required>
-          <br>
-          <br>
-          Wachtwoord  <input type="password" name="wachtwoordRegisteren" required>
-          <br>
-          <br>
+            <form action="/includes/checkRegistratie.php" method="post">
+                Gebruikersnaam <input type="text" name="gebruikernaam" required minlength="3">
+                <br>
+                <br>
+                Tel Nr <input type="number" name="telnummer" required maxlength="10">
+                <br>
+                <br>
+                Email <input type="email" name="emailadres" required>
+                <br>
+                <br>
+                Wachtwoord <input type="password" name="wachtwoord" required>
+                <br>
+                <br>
+                Herhaal Wachtwoord <input type="password" name="wwrepeat" required>
+                <br>
+                <br>
         </div>
-        <input type="submit" value="Registeren" id="registerKnop">
+        <button type="submit">Registeren</button>
+        </form>
     </div>
     </div>
 </body>
+
 </html>
