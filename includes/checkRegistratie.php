@@ -42,7 +42,7 @@
                 mysqli_query($conn, "INSERT INTO `users` (`Emailadres`, `Wachtwoord`, `Gebruikersnaam`, `Telnummer`) VALUES ('$emailadres', '$hasedWW', '$gebruikernaam', '$telnummer') ");
 
                 // Verstuur een email naar het emailadres met een uitnodiging / bevestiging.
-                header('Location: /registratie?success=registratie');
+                header('Location: /inlog?success=registratie');
                 exit();
 
             } else {
