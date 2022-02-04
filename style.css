@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body.bodyBerichten {
+  background: url("https://images4.alphacoders.com/720/thumb-1920-720499.jpg");
+}
+.topnav {
+  background: rgb(109, 44, 126);
+  height: 60px;
+}
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  margin-left: 25px;
+}
+a:hover {
+  background: rgb(102, 23, 122);
+}
+h1 {
+  margin-left: 42%;
+  margin-top: 100px;
+  color: rgba(255, 255, 255, 0.76);
+}
+.berichten {
+  border: solid black 2px;
+  height: 300px;
+  width: 600px;
+  margin-left: 30%;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.349);
+}
+.nummerBericht {
+  font-size: x-large;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+hr {
+  height: 1px;
+  background-color: black;
+  border: none;
+}
+.paginas {
+  border: solid rgba(255, 0, 0, 0) 1px;
+  width: 600px;
+  margin-left: 30%;
+}
+.vorigePagina {
+  border: solid black 1px;
+  width: 100px;
+  height: 20px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.349);
+}
+.volgendePagina {
+  border: solid black 1px;
+  width: 120px;
+  height: 20px;
+  margin-left: 25%;
+  background: rgba(255, 255, 255, 0.349);
+  position: absolute;
+}
+body#index {
+  background-image: url("https://cdn.wallpapersafari.com/37/88/J4zjBf.jpg");
+}
+.loginbox {
+  height: 200px;
+  width: 450px;
+  background: rgba(0, 0, 0, 0.555);
+  margin-left: 20%;
+  margin-top: 150px;
+  position: absolute;
+}
+.registerbox {
+  height: 500px;
+  width: 450px;
+  background: rgba(0, 0, 0, 0.555);
+  margin-left: 50%;
+  position: absolute;
+  margin-top: 150px;
+}
+#loginText {
+  height: 30px;
+  width: auto;
+  background: white;
+  font-size: 25px;
+  padding-left: 200px;
+  font-family: "Playfair Display", serif;
+}
+.loginInputs {
+  margin-top: 30px;
+  margin-left: 45px;
+}
+#loginKnop {
+  margin-top: 20px;
+  margin-left: 22%;
+  width: 250px;
+}
+#registerText {
+  height: 30px;
+  width: auto;
+  background: white;
+  font-size: 25px;
+  padding-left: 165px;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 30px;
+}
+.registerInputs {
+  color: white;
+  margin-left: 80px;
+}
+#registerKnop {
+  margin-top: 20px;
+  margin-left: 22%;
+  width: 250px;
+}
+
+/* styling index/homapage*/
+
+.split-container {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.box1 {
+  background-image: url("https://cdn.wallpapersafari.com/37/88/J4zjBf.jpg");
+  width: 50%;
+  height: 100vh;
+  flex: 1;
+}
+
+.box2 {
+  background-color: hsl(236, 45%, 42%);
+  width: 50%;
+  height: 100vh;
+  flex: 1;
+}
+
+.box2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button_box {
+  display: flex;
+  flex-direction: column;
+}
+
+.ibutton {
+  border: 1px solid white;
+  background-image: linear-gradient(
+    to right,
+    #6253e1,
+    #852d91,
+    #a3a1ff,
+    #f24645
+  );
+  box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+  width: 200px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align: center;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  transition: all 0.4s ease-in-out;
+}
+
+.ibutton:hover {
+  background-image: linear-gradient(to right, #852d91, #a3a1ff);
+  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+
+@media (max-width: 500px) {
+  .split-container {
+    flex-direction: column;
+  }
+  .box1,
+  .box2 {
+    width: 100%;
+  }
+}
