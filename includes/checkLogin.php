@@ -5,7 +5,7 @@
         require_once 'db_conn.php';
 
         // Check of Input Field "Emailadres" leeg is
-        if (trim($_POST['user-mail']) == NULL) {
+        if (trim($_POST['userEmail']) == NULL) {
             header("Location: /inloggen?error=emailuserleeg");
         }
     
@@ -14,28 +14,26 @@
             header("Location: /inloggen?error=wwleeg");
         }
         
-        $userMail = $conn->real_escape_string($_POST['user-mail']); // Haal eventuele inject voor SQL eruit
+        $userMail = $conn->real_escape_string($_POST['userEmail']); // Haal eventuele inject voor SQL eruit
         $wachtwoord = $conn->real_escape_string($_POST['password']); // Haal eventuele inject voor SQL eruit
 
         $sql = mysqli_query($conn, "SELECT * FROM `users` WHERE `Emailadres` = '$userMail' OR `Gebruikersnaam` = '$userMail' ");
         $rowCount = mysqli_num_rows($sql);
 
-        if ($rowCount == 1) {
+        if ($rowCount > 0) {
 
             $row = mysqli_fetch_assoc($sql);
             $wwDB = $row['Wachtwoord'];
 
             if (password_verify($wachtwoord, $wwDB)) {
 
-                // session_start();
-                // $_SESSION['loggedin'] = true;
-                // $_SESSION['username'] = $row['Gebruikersnaam'];
-                // $_SESSION['rowid'] = $row['ID'];
+                session_start();
+                $_SESSION['loggedin'] = true;
+                $_SESSION['username'] = $row['Gebruikersnaam'];
+                $_SESSION['rowid'] = $row['ID'];
 
-                // header('Location: /index?login=success');
-                // exit();
-
-                echo "LOGGEDIN SUCCESFULLY!";
+                header('Location: /berichten?login=success');
+                exit();
 
             } else {
                 header('Location: /inloggen?error=wwincorrect');

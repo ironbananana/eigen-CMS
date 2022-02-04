@@ -3,23 +3,23 @@
     if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
         if (trim($_POST['gebruikernaam']) == NULL) {
-            header("Location: /registeren?error=gebruikernaamleeg");
+            header("Location: /registratie?error=gebruikernaamleeg");
         }
 
         if (trim($_POST['telnummer']) == NULL) {
-            header("Location: /registeren?error=telleeg");
+            header("Location: /registratie?error=telleeg");
         }
 
         if (trim($_POST['emailadres']) == NULL) {
-            header("Location: /registeren?error=emaileeg");
+            header("Location: /registratie?error=emaileeg");
         }
     
         if (trim($_POST['wachtwoord']) == NULL) {
-            header("Location: /registeren?error=wwleeg");
+            header("Location: /registratie?error=wwleeg");
         }
         
         if (trim($_POST['wwrepeat']) == NULL) {
-            header("Location: /registeren?error=ww2leeg");
+            header("Location: /registratie?error=ww2leeg");
         }
 
         require_once 'db_conn.php';
@@ -42,20 +42,20 @@
                 mysqli_query($conn, "INSERT INTO `users` (`Emailadres`, `Wachtwoord`, `Gebruikersnaam`, `Telnummer`) VALUES ('$emailadres', '$hasedWW', '$gebruikernaam', '$telnummer') ");
 
                 // Verstuur een email naar het emailadres met een uitnodiging / bevestiging.
-                header('Location: /inloggen?success=registratie');
+                header('Location: /registratie?success=registratie');
                 exit();
 
             } else {
-                header('Location: /registeren?error=pwdnomatch');
+                header('Location: /registratie?error=pwdnomatch');
                 exit();
             }
 
         } else {
-            header('Location: /registeren?error=doublemail');
+            header('Location: /registratie?error=doublemail');
             exit();
         }
 
     } else {
-        header('Location: /registeren?error=optyfengauw');
+        header('Location: /registratie?error=optyfengauw');
         exit();
     }

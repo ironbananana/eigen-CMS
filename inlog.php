@@ -19,7 +19,7 @@
 
         <form action="/includes/checkLogin.php" method="post">
 
-            <input type="text" name="user-email" id="user-email" placeholder="Gebruikersnaam of Emailadres.." required>
+            <input type="text" name="userEmail" id="userEmail" placeholder="Gebruikersnaam of Emailadres.." required>
 
             <input type="password" name="password" id="password" placeholder="Wachtwoord.." required>
 
