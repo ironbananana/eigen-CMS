@@ -9,8 +9,9 @@
 </head>
 <body class="bodyBerichten">
       <?php include('header.php'); ?>
-
+      <div class="messagetitle">
       <h1>Berichten</h1>
+      </div>
       <div class="berichten">
           <div class="nummerBericht">0- Bericht | Quinten | 01-02-2022 | 19:30 | Verwijder bericht</div>
           <hr>
@@ -27,10 +28,11 @@
           <div class="nummerBericht">6- Bericht | Quinten | 01-02-2022 | 19:30 | Verwijder bericht</div>
           <hr>
           <div class="nummerBericht">7- Bericht | Quinten | 01-02-2022 | 19:30 | Verwijder bericht</div>
+      
+      <div class="pagebuttons">
+      <button class="vorigePagina">Vorige pagina</button>
+      <button class="volgendePagina">Volgende Pagina</button>
       </div>
-      <div class="paginas">
-      <div class="vorigePagina">Vorige pagina</div>
-      <div class="volgendePagina">Volgende Pagina</div>
     </div>
 
 
