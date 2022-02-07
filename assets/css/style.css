@@ -8,70 +8,96 @@
 /* messagepage styling */
 body.bodyBerichten {
   background: url("https://images4.alphacoders.com/720/thumb-1920-720499.jpg");
-  display: flex;
-  flex-direction: column;
-
+  display: grid;
+  grid-template-rows: 10% 1fr 20%;
+  height: 100vh;
 }
+
+/* navbar styling */
 .topnav {
-  background: rgb(109, 44, 126);
-  height: 60px;
+  background: rgba(110, 44, 126, 0.604);
+  grid-row: 1 / span 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 10px;
+  width: 100%;
 }
 
-.topnav a{
+.topnav a {
   text-decoration: none;
   color: white;
   font-size: 20px;
   margin-left: 25px;
 }
 
-.topnav a:hover{
+.topnav .messagetitle {
+  margin-left: auto;
+  margin-right: 25px;
+}
+
+.topnav a:hover {
   background: rgb(102, 23, 122);
 }
-
-.messagetitle h1{
-  margin-left: 42%;
-  margin-top: 100px;
-  color: rgba(255, 255, 255, 0.76);
+/* message title  styling */
+.titlecontainer {
+  grid-row: 2 / span 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+.titlecontainer h1 {
+  color: white;
+}
+/* message container styling */
 .berichten {
   display: flex;
   flex-direction: column;
-  border: solid black 2px;
-  max-height: 100%;
-  max-width: 50%;
-  margin-left: 25%;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.349);
+  margin: 0 auto;
+  margin-top: 50px;
+  height: 90%;
+  width: 55%;
+  align-items: center;
+  grid-row: 2 / span 1;
+  background-color: rgba(0, 0, 0, 0.734);
+  border-radius: 20px;
 }
+
 .nummerBericht {
   font-size: x-large;
-  margin-left: 5px;
-  margin-top: 5px;
+  margin-left: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  color: white;
 }
+
+.nummerBericht:hover {
+  color: rgba(255, 255, 255, 0.349);
+}
+
 hr {
   height: 1px;
   background-color: black;
   border: none;
 }
+
+/* page buttons*/
 .pagebuttons {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  
+  grid-row: 3 / span 1;
 }
-.vorigePagina {
-  border: solid black 1px;
-  background: rgba(255, 255, 255, 0.349);
+.vorigePagina .ibutton {
   cursor: pointer;
 }
-.volgendePagina {
-  border: solid black 1px;
-  background: rgba(255, 255, 255, 0.349);
+.volgendePagina .ibutton {
   cursor: pointer;
-  
 }
+
 
 /* styling index/homapage*/
 
@@ -174,7 +200,9 @@ hr {
   align-items: center;
   flex-direction: column;
 }
-
+.i.far .fa-eye {
+  cursor: pointer;
+}
 .right {
   display: flex;
   flex-direction: column;
@@ -205,34 +233,26 @@ hr {
   border: 1px solid hsl(236, 45%, 42%);
 }
 
-.signinbtn{
+.signinbtn {
   width: 100%;
   margin-top: 15px;
-  border-radius:25px;
-  padding:6px;
+  border-radius: 25px;
+  padding: 6px;
   cursor: pointer;
-  background-image: linear-gradient(
-    to right,
-    #001a5c,
-    #262e86,
-    #ac73d6
+  background-image: linear-gradient(to right, #001a5c, #262e86, #ac73d6);
 
-  );
-  
   border: 1px solid white;
   color: white;
   height: 40px;
 }
 
-.signinbtn:hover{
-  
-    background-image: linear-gradient(to right, #852d91, #a3a1ff);
-    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
-  
+.signinbtn:hover {
+  background-image: linear-gradient(to right, #852d91, #a3a1ff);
+  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
 }
 
- .legal{
-  margin-top:20px;
+.legal {
+  margin-top: 20px;
 }
 
 @media (max-width: 500px) {
