@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php 
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CMS Registration</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/c3875a19f9.js" crossorigin="anonymous"></script>
-</head>
+  session_start();
+
+  $config['titel'] = "Registreren";
+  include_once 'includes/header.php';
+
+?> 
 
 <body class="signuppage">
 
@@ -23,7 +17,7 @@
         </div>
         <div class="right">
             <!--rightside!-->
-            <form method="post" action="" class="registerform">
+            <form method="post" action="/includes/checkRegistratie.php" class="registerform">
                 
                     <h1>Sign up</h1>
                 
@@ -42,25 +36,25 @@
                 <div class="input-container email">
                     <!--input email!-->
                     <label for="email">E-mail</label>
-                    <input type="email" name="emailRegisteren" required>
+                    <input type="email" name="emailadres" required>
                 </div>
 
                 <div class="input-container phone">
                     <!--input phone!-->
                     <label for="phone">Phone number</label>
-                    <input type="number" name="emailRegisteren" required>
+                    <input type="number" name="telnummer" required>
                 </div>
 
                 <div class="input-container password">
                     <!--input password!-->
                     <label for="password">Password</label>
-                    <input type="password" name="wachtwoordRegisteren" placeholder="choose a strong password" required>
+                    <input type="password" name="wachtwoord" placeholder="choose a strong password" required>
                 </div>
 
                 <div class="input-container password">
                     <!--input password repeat!-->
                     <label for="password repeat">Repeat password</label>
-                    <input type="password" name="wachtwoordRegisteren" placeholder="reapeat password" required>
+                    <input type="password" name="wwrepeat" placeholder="reapeat password" required>
                     <i class="fa fa-eye-slash"></i> <!-- can add functionality for user to show and hide password!-->
                 </div>
                

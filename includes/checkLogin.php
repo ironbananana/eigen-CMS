@@ -17,7 +17,7 @@
         $userMail = $conn->real_escape_string($_POST['userEmail']); // Haal eventuele inject voor SQL eruit
         $wachtwoord = $conn->real_escape_string($_POST['password']); // Haal eventuele inject voor SQL eruit
 
-        $sql = mysqli_query($conn, "SELECT * FROM `users` WHERE `Emailadres` = '$userMail' OR `Gebruikersnaam` = '$userMail' ");
+        $sql = mysqli_query($conn, "SELECT * FROM `users` WHERE `Emailadres` = '$userMail' ");
         $rowCount = mysqli_num_rows($sql);
 
         if ($rowCount > 0) {
@@ -29,7 +29,8 @@
 
                 session_start();
                 $_SESSION['loggedin'] = true;
-                $_SESSION['username'] = $row['Gebruikersnaam'];
+                $_SESSION['voornaam'] = $row['Voornaam'];
+                $_SESSION['achternaam'] = $row['Achternaam'];
                 $_SESSION['rowid'] = $row['ID'];
 
                 header('Location: /berichten?login=success');

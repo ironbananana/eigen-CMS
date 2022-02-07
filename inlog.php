@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php 
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CMS Login</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/c3875a19f9.js" crossorigin="anonymous"></script>
-</head>
+  session_start();
+
+  $config['titel'] = "Inloggen";
+  include_once 'includes/header.php';
+
+?> 
 
 <body>
     <div class="split-screen">
@@ -24,17 +18,17 @@
         <div class="right ">
             <!--rightside!-->
             
-            <form method="post" action="" class="registerform">
+            <form method="post" action="/includes/checkLogin.php" class="registerform">
             <h1>Sign in</h1>
                 <div class="input-container loginemail">
                     <!--input email!-->
                     <label for="email">E-mail</label>
-                    <input type="email" name="emailRegisteren" required>
+                    <input type="email" name="userEmail" required>
                 </div>
                 <div class="input-container loginpassword">
                     <!--input password!-->
                     <label for="password">Password</label>
-                    <input type="password" name="wachtwoordRegisteren" required>
+                    <input type="password" name="password" required>
                 </div>
 
                 <input type="submit" value="Login"  class="signinbtn">
