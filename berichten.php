@@ -3,7 +3,7 @@
   session_start();
 
   if (!$_SESSION['loggedin']) {
-    header('Location: inlog?error=nietingelogd');
+    header('Location: /inlog?error=nietingelogd');
     exit();
   }
 
