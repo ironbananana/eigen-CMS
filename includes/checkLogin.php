@@ -6,12 +6,12 @@
 
         // Check of Input Field "Emailadres" leeg is
         if (trim($_POST['userEmail']) == NULL) {
-            header("Location: /inloggen?error=emailuserleeg");
+            header("Location: ./inlog?error=emailuserleeg");
         }
     
         // Check of Input Field "Wachtwoord" leeg is
         if (trim($_POST['password']) == NULL) {
-            header("Location: /inloggen?error=wwleeg");
+            header("Location: ./inlog?error=wwleeg");
         }
         
         $userMail = $conn->real_escape_string($_POST['userEmail']); // Haal eventuele inject voor SQL eruit
@@ -33,20 +33,20 @@
                 $_SESSION['achternaam'] = $row['Achternaam'];
                 $_SESSION['rowid'] = $row['ID'];
 
-                header('Location: /berichten?login=success');
+                header('Location: ./berichten?login=success');
                 exit();
 
             } else {
-                header('Location: /inloggen?error=wwincorrect');
+                header('Location: ./inlog?error=wwincorrect');
             exit();
             }
 
         } else {
-            header('Location: /inloggen?error=noormoreaccounts');
+            header('Location: ./inlog?error=noormoreaccounts');
             exit();
         }
         
     } else {
-        header('Location: /inloggen?error=optyfengauw');
+        header('Location: ./inlog?error=optyfengauw');
         exit();
     }

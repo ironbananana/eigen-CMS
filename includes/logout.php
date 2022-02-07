@@ -4,7 +4,7 @@
     session_unset();
     session_destroy();
 
-    header('Location: /inlog?success=logout');
+    header('Location: ./inlog?success=logout');
     exit();
 
 ?> 
