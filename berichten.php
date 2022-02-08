@@ -25,7 +25,7 @@ require_once 'includes/db_conn.php';
       <ul class="navlist">
         <li><a href="#home">Home</a></li>
         <li><a href="#About">About</a></li>
-        <li><a href="#Toevoegen">Bericht +</a></li>
+        <li><a id="addMessage">Bericht +</a></li>
         <li><a href="#About" class="logoutbtn">Logout</a></li>
       </ul>
     </div>
