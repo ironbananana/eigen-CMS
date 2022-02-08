@@ -1,25 +1,25 @@
-<?php 
+<?php
 
-  session_start();
+session_start();
 
-  $config['titel'] = "Inloggen";
-  include_once 'includes/header.php';
+$config['titel'] = "Inloggen";
+include_once 'includes/header.php';
 
-?> 
+?>
 
 <body>
     <div class="split-screen">
         <div class="left">
             <!--leftside!-->
-            
-                <h1>Welcome back!</h1>
-            
+
+            <h1>Welcome back!</h1>
+
         </div>
         <div class="right ">
             <!--rightside!-->
-            
+
             <form method="post" action="/includes/checkLogin.php" class="registerform">
-            <h1>Sign in</h1>
+                <h1>Sign in</h1>
                 <div class="input-container loginemail">
                     <!--input email!-->
                     <label for="email">E-mail</label>
@@ -28,10 +28,14 @@
                 <div class="input-container loginpassword">
                     <!--input password!-->
                     <label for="password">Password</label>
-                    <input type="password" name="password" required>
+                    <input type="password" name="password" id="myInput" required>
+                    <i class="fas fa-eye-slash" id="hide" onclick="passwordFunction()"></i>
+                    <i class="fas fa-eye" id="show" onclick="passwordFunction()"></i>
+
                 </div>
 
-                <input type="submit" value="Login"  class="signinbtn">
+
+                <input type="submit" value="Login" class="signinbtn">
             </form>
         </div>
     </div>
