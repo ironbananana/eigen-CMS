@@ -82,6 +82,7 @@ a.logoutbtn {
   margin-top: 10px;
   cursor: pointer;
   color: white;
+  width: 95%;
 }
 
 .nummerBericht:hover {
@@ -321,6 +322,31 @@ hr {
 
 .legal {
   margin-top: 20px;
+}
+
+.noSpace {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.delButton {
+  display: inline;
+  float: right;
+  right: 0;
+  position: absolute;
+  background-color: transparent;
+  border: 0;
+  color: white;
+  font-size: 16px;  
+}
+
+.delButton:hover {
+  color: red;
+  cursor: pointer;
 }
 
 @media (max-width: 500px) {

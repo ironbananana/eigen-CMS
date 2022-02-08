@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     session_start();
 
     if (!$_SESSION['loggedin']) {
-    header('Location: ./inlog?error=nietingelogd');
+    header('Location: /inlog?error=nietingelogd');
     exit();
     }
 
