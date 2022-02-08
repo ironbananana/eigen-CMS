@@ -18,7 +18,7 @@ include_once 'includes/header.php';
   <div class="topnav">
     <a href="#home">Home</a>
     <a href="#About">About</a>
-    <a href="#Toevoegen">Bericht +</a>
+    <a id="addMessage">Bericht +</a>
     <a class="messagetitle" href="#backtofirstmessagepage">Messages</a>
 
   </div>
@@ -60,6 +60,24 @@ include_once 'includes/header.php';
   <div class="footer"></div>
 
   <script>
+    $('#addMessage').on('click', function() {
+
+      $.dialog({
+        title: 'Bericht Toevoegen',
+        theme: 'material',
+        backgroundDismiss: false,
+        columnClass: 'col-md-6',
+        content: '' +
+          '<form action="/includes/addMessage.php" method="post">' +
+            '<p class="fw-bold noSpace">Bericht:</p>' +
+            '<textarea name="bericht" class="editMessage" rows="15" cols="100" ></textarea>' +
+            '<br>' +
+            '<button type="submit" class="submitButton">Versturen</button>' +
+          '</form>',
+      });
+
+    });
+
     function getTime(input) {
       let Unix = new Date(input * 1000);
 
