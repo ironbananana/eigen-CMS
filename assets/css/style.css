@@ -36,6 +36,10 @@ body.bodyBerichten {
   margin-right: 25px;
 }
 
+.topnav .messagetitle:hover{
+  background: rgb(102, 23, 122);
+}
+
 .topnav a:hover {
   background: rgb(102, 23, 122);
 }
@@ -269,4 +273,13 @@ hr {
     max-width: 50%;
     height: 100%;
   }
+}
+
+/*styling voor eye and eye slash*/
+i.fas.fa-eye , i.fas.fa-eye-slash {
+  cursor: pointer;
+}
+
+#hide{
+  display: none;
 }
