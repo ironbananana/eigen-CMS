@@ -31,27 +31,28 @@ include_once 'includes/header.php';
   </div>
 
   <div class="berichten">
-    <div class="nummerBericht">0- Bericht | Quinten | 01-02-2022 | 19:30 | Verwijder bericht</div>
-    <hr>
-    <div class="nummerBericht">1- Bericht | Quinten | 01-02-2022 | 19:30 | Verwijder bericht</div>
-    <hr>
-    <div class="nummerBericht">2- Bericht | Quinten | 01-02-2022 | 19:30 | Verwijder bericht</div>
-    <hr>
-    <div class="nummerBericht">3- Bericht | Quinten | 01-02-2022 | 19:30 | Verwijder bericht</div>
-    <hr>
-    <div class="nummerBericht">4- Bericht | Quinten | 01-02-2022 | 19:30 | Verwijder bericht</div>
-    <hr>
-    <div class="nummerBericht">5- Bericht | Quinten | 01-02-2022 | 19:30 | Verwijder bericht</div>
-    <hr>
-    <div class="nummerBericht">6- Bericht | Quinten | 01-02-2022 | 19:30 | Verwijder bericht</div>
-    <hr>
-    <div class="nummerBericht">7- Bericht | Quinten | 01-02-2022 | 19:30 | Verwijder bericht</div>
-    <hr>
-    <div class="nummerBericht">8- Bericht | Quinten | 01-02-2022 | 19:30 | Verwijder bericht</div>
-    <hr>
-    <div class="nummerBericht">9- Bericht | Quinten | 01-02-2022 | 19:30 | Verwijder bericht</div>
-    <hr>
-    <div class="nummerBericht">10- Bericht | Quinten | 01-02-2022 | 19:30 | Verwijder bericht</div>
+
+    <?php
+    $sql = mysqli_query($conn, "SELECT * FROM `messages` ORDER BY `ID` DESC ");
+    $rowCount = mysqli_num_rows($sql);
+
+    if ($rowCount < 1) {
+    ?>
+      <div class="nummerBericht">
+        Geen berichten gevonden!
+      </div>
+      <?php } else {
+
+      while ($row = mysqli_fetch_assoc($sql)) {
+      ?>
+        <div style="position: relative" class="nummerBericht">
+          <span class="viewMessage" data-id="<?= $row['ID'] ?>" data-authorID="<?= $row['AuthorID'] ?>" data-timestamp="<?= $row['Timestamp'] ?>" data-bericht="<?= $row['Bericht'] ?>" data-authorName="<?= $row['AuthorName'] ?>"><?= $row['ID'] ?> - Bericht | <?= $row['AuthorName'] ?> | <?= date('d-m-Y', $row['Timestamp']) ?> | <?= date('H:s', $row['Timestamp']) ?></span>
+          <button class="delButton" data-id="<?= $row['ID'] ?>"><i class="fas fa-trash"></i></button>
+        </div>
+    <?php
+      }
+    }
+    ?>
   </div>
   <div class="pagebuttons">
     <button class="ibutton">Vorige pagina</button>
