@@ -259,6 +259,15 @@ hr {
   margin-top: 20px;
 }
 
+.noSpace {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
 @media (max-width: 500px) {
   .split-screen {
     flex-direction: column;
