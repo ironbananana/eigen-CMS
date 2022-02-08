@@ -16,12 +16,10 @@ body.bodyBerichten {
 /* navbar styling */
 .topnav {
   background: rgba(110, 44, 126, 0.604);
-  grid-row: 1 / span 1;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: flex-start;
-  border-radius: 10px;
-  width: 100%;
+  color: white;
 }
 
 .topnav a {
@@ -31,12 +29,29 @@ body.bodyBerichten {
   margin-left: 25px;
 }
 
-.topnav .messagetitle {
-  margin-left: auto;
-  margin-right: 25px;
+.navbar_links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
-.topnav .messagetitle:hover{
+.navbar_links li {
+  list-style: none;
+}
+
+.navbar_links li a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  display: block;
+}
+
+a.logoutbtn {
+  margin-left: auto;
+  
+}
+
+.topnav .messagetitle:hover {
   background: rgb(102, 23, 122);
 }
 
@@ -44,15 +59,7 @@ body.bodyBerichten {
   background: rgb(102, 23, 122);
 }
 /* message title  styling */
-.titlecontainer {
-  grid-row: 2 / span 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.titlecontainer h1 {
-  color: white;
-}
+
 /* message container styling */
 .berichten {
   display: flex;
@@ -101,7 +108,64 @@ hr {
 .volgendePagina .ibutton {
   cursor: pointer;
 }
+/* hamburger menu*/
+.togglebtn {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
 
+.togglebtn .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .berichten {
+    width: 100%;
+  }
+
+  .pagebuttons {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .togglebtn {
+    display: flex;
+  }
+  .navbar_links {
+    display: none;
+    width: 100%;
+  }
+
+  .topnav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar_links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar_links li {
+    text-align: center;
+  }
+
+  .navbar_links li a {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar_links.active {
+    display: flex;
+  }
+}
 
 /* styling index/homapage*/
 
@@ -259,15 +323,6 @@ hr {
   margin-top: 20px;
 }
 
-.noSpace {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.fw-bold {
-  font-weight: bold;
-}
-
 @media (max-width: 500px) {
   .split-screen {
     flex-direction: column;
@@ -285,10 +340,11 @@ hr {
 }
 
 /*styling voor eye and eye slash*/
-i.fas.fa-eye , i.fas.fa-eye-slash {
+i.fas.fa-eye,
+i.fas.fa-eye-slash {
   cursor: pointer;
 }
 
-#hide{
+#hide {
   display: none;
 }
