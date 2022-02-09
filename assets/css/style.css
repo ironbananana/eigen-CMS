@@ -48,7 +48,6 @@ body.bodyBerichten {
 
 a.logoutbtn {
   margin-left: auto;
-  
 }
 
 .topnav .messagetitle:hover {
@@ -132,11 +131,14 @@ hr {
   .berichten {
     width: 100%;
   }
-
   .pagebuttons {
     max-width: 100%;
     max-height: 100%;
   }
+  .topnav {
+    height: 60%;
+  }
+
   .togglebtn {
     display: flex;
   }
@@ -145,27 +147,10 @@ hr {
     width: 100%;
   }
 
-  .topnav {
-    flex-direction: column;
-    align-items: flex-start;
+  .navbar_links .navlist li a{
+    padding: .75rem ;
   }
 
-  .navbar_links ul {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .navbar_links li {
-    text-align: center;
-  }
-
-  .navbar_links li a {
-    padding: 0.5rem 1rem;
-  }
-
-  .navbar_links.active {
-    display: flex;
-  }
 }
 
 /* styling index/homapage*/
@@ -341,7 +326,7 @@ hr {
   background-color: transparent;
   border: 0;
   color: white;
-  font-size: 16px;  
+  font-size: 16px;
 }
 
 .delButton:hover {
@@ -374,6 +359,7 @@ i.fas.fa-eye-slash {
 #hide {
   display: none;
 }
+
 /* styling voor de messages */
 
 .errorMessage{
