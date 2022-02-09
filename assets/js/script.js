@@ -1,15 +1,24 @@
-function passwordFunction(){
-    var x = document.getElementById("myInput");
-    if(x.type === "password"){
-        x.type = "text";
-        document.getElementById("hide").style.display = "inline-block";
-        document.getElementById("show").style.display = "none";
+function passwordFunction() {
+  //function for password show/hide icon
+  var x = document.getElementsByClassName("myInput");
+  for (let index = 0; index < x.length; index++) {
+    const element = x[index];
+    if (element.type === "password") {
+      element.type = "text";
+     document.getElementById("show").className = "fas fa-eye-slash";
+    } else {
+      element.type = "password";
+      document.getElementById("show").className = "fas fa-eye";
     }
-    else{
-        x.type = "password";
-        document.getElementById("hide").style.display = "none";
-        document.getElementById("show").style.display = "inline-block";
-    }
+  }
 }
 
-
+function hamburgerFunction() {
+  // function for the hamburger menu
+  var x = document.getElementById("navbar_links");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
