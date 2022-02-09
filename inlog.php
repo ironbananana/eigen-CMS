@@ -20,6 +20,10 @@ include_once 'includes/header.php';
 
             <form method="post" action="/includes/checkLogin.php" class="registerform">
                 <h1>Sign in</h1>
+
+                <div class="errorMessage">Login Failed</div>
+            <div class="succesMessage">Login Succes</div>
+
                 <div class="input-container loginemail">
                     <!--input email!-->
                     <label for="email">E-mail</label>

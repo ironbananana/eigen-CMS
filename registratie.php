@@ -20,6 +20,9 @@
             <form method="post" action="/includes/checkRegistratie.php" class="registerform">
                 
                     <h1>Sign up</h1>
+
+                    <div class="errorMessage">Signup Failed</div>
+    <div class="succesMessage">Signup Succes</div>
                 
                 <div class="input-container vnaam">
                     <!--input firstname!-->

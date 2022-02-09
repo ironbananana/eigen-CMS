@@ -374,3 +374,25 @@ i.fas.fa-eye-slash {
 #hide {
   display: none;
 }
+/* styling voor de messages */
+
+.errorMessage{
+  height: 30px;
+  width: 200px;
+  background: white;
+  border: solid red;
+  border-radius: 5%;
+  text-align: center;
+  color: black;
+  margin-bottom: 10px;
+}
+.succesMessage{
+  height: 30px;
+  width: 200px;
+  background: white;
+  border: solid green;
+  border-radius: 5%;
+  text-align: center;
+  color: black;
+  margin-bottom: 10px;
+}
