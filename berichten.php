@@ -16,12 +16,12 @@ require_once 'includes/db_conn.php';
 
 <body class="bodyBerichten">
   <div class="topnav">
-    <a href="#" class="togglebtn">
+    <a href="#" class="togglebtn" onclick="hamburgerFunction()">
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
     </a>
-    <div class="navbar_links">
+    <div class="navbar_links" id="navbar_links">
       <ul class="navlist">
         <li><a href="#home">Home</a></li>
         <li><a href="#About">About</a></li>
