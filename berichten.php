@@ -23,10 +23,13 @@ require_once 'includes/db_conn.php';
     </a>
     <div class="navbar_links" id="navbar_links">
       <ul class="navlist" id="navlist">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#About">About</a></li>
+        <!-- <li><a href="#home">Home</a></li>
+        <li><a href="#About">About</a></li> -->
         <li><a id="addMessage">Bericht +</a></li>
-        <li><a href="#About" class="logoutbtn">Logout</a></li>
+        <?php if ($_SESSION['role'] == "ADMIN") { ?>
+          <li><a href="/adminpanel" class="logoutbtn">Admin Panel</a></li>
+        <?php } ?>
+        <li><a href="/includes/logout.php" class="logoutbtn">Logout</a></li>
       </ul>
     </div>
   </div>
@@ -79,14 +82,13 @@ require_once 'includes/db_conn.php';
         columnClass: 'col-md-4',
         autoClose: 'cancel|8000',
         buttons: {
-          cancel: function() {
-          },
+          cancel: function() {},
           deleteButton: {
             text: 'Bericht verwijderen',
             btnClass: 'btn-blue',
             keys: ['enter'],
             action: function() {
-              
+
               window.location.href = '/includes/deleteMessage?id=' + messageID;
 
             }

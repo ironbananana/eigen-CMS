@@ -22,7 +22,7 @@ include_once 'includes/header.php';
                 <h1>Sign in</h1>
 
                 <div class="errorMessage">Login Failed</div>
-            <div class="succesMessage">Login Succes</div>
+                <div class="succesMessage">Login Succes</div>
 
                 <div class="input-container loginemail">
                     <!--input email!-->

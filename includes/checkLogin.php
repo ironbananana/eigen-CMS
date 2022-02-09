@@ -35,7 +35,8 @@
                 $_SESSION['rowid'] = $row['ID'];
 
                 $timestamp = time();
-                mysqli_query($conn, "UPDATE `users` SET `LastLoggedin` = '$timestamp' WHERE `ID` = '$timestamp' ");
+                $userID = $row['ID'];
+                mysqli_query($conn, "UPDATE `users` SET `LastLoggedin` = '$timestamp' WHERE `ID` = '$userID' ");
 
                 header('Location: /berichten?login=success');
                 exit();

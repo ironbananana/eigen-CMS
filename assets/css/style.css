@@ -1,384 +1,449 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
+
 
 /* messagepage styling */
+
 body.bodyBerichten {
-  background: url("https://images4.alphacoders.com/720/thumb-1920-720499.jpg");
-  display: grid;
-  grid-template-rows: 10% 1fr 20%;
-  height: 100vh;
+    background: url("https://images4.alphacoders.com/720/thumb-1920-720499.jpg");
+    display: grid;
+    grid-template-rows: 10% 1fr 20%;
+    height: 100vh;
 }
 
+body.bodyBerichten2 {
+    background: url("https://images4.alphacoders.com/720/thumb-1920-720499.jpg");
+}
+
+
 /* navbar styling */
+
 .topnav {
-  background: rgba(110, 44, 126, 0.604);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
+    background: rgba(110, 44, 126, 0.604);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
 }
 
 .topnav a {
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  margin-left: 25px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin-left: 25px;
 }
 
 .navbar_links ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
 .navbar_links li {
-  list-style: none;
+    list-style: none;
 }
 
 .navbar_links li a {
-  text-decoration: none;
-  color: white;
-  padding: 1rem;
-  display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display: block;
 }
 
 a.logoutbtn {
-  margin-left: auto;
+    margin-left: auto;
 }
 
 .topnav .messagetitle:hover {
-  background: rgb(102, 23, 122);
+    background: rgb(102, 23, 122);
 }
 
 .topnav a:hover {
-  background: rgb(102, 23, 122);
+    background: rgb(102, 23, 122);
 }
+
+
 /* message title  styling */
 
+
 /* message container styling */
+
 .berichten {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  margin-top: 50px;
-  height: 90%;
-  width: 55%;
-  align-items: center;
-  grid-row: 2 / span 1;
-  background-color: rgba(0, 0, 0, 0.734);
-  border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    height: 90%;
+    width: 55%;
+    align-items: center;
+    grid-row: 2 / span 1;
+    background-color: rgba(0, 0, 0, 0.734);
+    border-radius: 20px;
 }
 
 .nummerBericht {
-  font-size: x-large;
-  margin-left: 10px;
-  margin-top: 10px;
-  cursor: pointer;
-  color: white;
-  width: 95%;
+    font-size: x-large;
+    margin-left: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    color: white;
+    width: 95%;
 }
 
 .nummerBericht:hover {
-  color: rgba(255, 255, 255, 0.349);
+    color: rgba(255, 255, 255, 0.349);
 }
 
 hr {
-  height: 1px;
-  background-color: black;
-  border: none;
+    height: 1px;
+    background-color: black;
+    border: none;
 }
 
+
 /* page buttons*/
+
 .pagebuttons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  grid-row: 3 / span 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    grid-row: 3 / span 1;
 }
+
 .vorigePagina .ibutton {
-  cursor: pointer;
+    cursor: pointer;
 }
+
 .volgendePagina .ibutton {
-  cursor: pointer;
+    cursor: pointer;
 }
+
+
 /* hamburger menu*/
+
 .togglebtn {
-  position: absolute;
-  top: 0.75rem;
-  right: 1rem;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
 }
 
 .togglebtn .bar {
-  height: 3px;
-  width: 100%;
-  background-color: white;
-  border-radius: 10px;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
 }
 
 @media (max-width: 600px) {
-  .berichten {
-    width: 100%;
-  }
-  .pagebuttons {
-    max-width: 100%;
-    max-height: 100%;
-  }
-  .topnav {
-    height: 60%;
-  }
-
-  .togglebtn {
-    display: flex;
-  }
-  .navbar_links {
-    display: none;
-    width: 100%;
-  }
-
-  .navbar_links .navlist li a{
-    padding: .75rem ;
-  }
-
+    .berichten {
+        width: 100%;
+    }
+    .pagebuttons {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .topnav {
+        height: 60%;
+    }
+    .togglebtn {
+        display: flex;
+    }
+    .navbar_links {
+        display: none;
+        width: 100%;
+    }
+    .navbar_links .navlist li a {
+        padding: .75rem;
+    }
 }
+
 
 /* styling index/homapage*/
 
 .split-container {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100vh;
-  display: flex;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    display: flex;
 }
 
 .box1 {
-  background-image: url("https://cdn.wallpapersafari.com/37/88/J4zjBf.jpg");
-  width: 50%;
-  height: 100vh;
-  flex: 1;
+    background-image: url("https://cdn.wallpapersafari.com/37/88/J4zjBf.jpg");
+    width: 50%;
+    height: 100vh;
+    flex: 1;
 }
 
 .box2 {
-  background-color: hsl(236, 45%, 42%);
-  width: 50%;
-  height: 100vh;
-  flex: 1;
+    background-color: hsl(236, 45%, 42%);
+    width: 50%;
+    height: 100vh;
+    flex: 1;
 }
 
 .box2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .button_box {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .ibutton {
-  border: 1px solid white;
-  background-image: linear-gradient(
-    to right,
-    #6253e1,
-    #852d91,
-    #a3a1ff,
-    #f24645
-  );
-  box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
-  width: 200px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #fff;
-  cursor: pointer;
-  margin: 20px;
-  height: 55px;
-  text-align: center;
-  background-size: 300% 100%;
-  border-radius: 50px;
-  transition: all 0.4s ease-in-out;
+    border: 1px solid white;
+    background-image: linear-gradient( to right, #6253e1, #852d91, #a3a1ff, #f24645);
+    box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align: center;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    transition: all 0.4s ease-in-out;
 }
 
 .ibutton:hover {
-  background-image: linear-gradient(to right, #852d91, #a3a1ff);
-  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+    background-image: linear-gradient(to right, #852d91, #a3a1ff);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
 }
 
 @media (max-width: 500px) {
-  .split-container {
-    flex-direction: column;
-  }
-  .box1,
-  .box2 {
-    width: 100%;
-  }
+    .split-container {
+        flex-direction: column;
+    }
+    .box1,
+    .box2 {
+        width: 100%;
+    }
 }
 
+
 /* styling registration and login*/
+
 .signuppage {
-  padding: 0;
-  margin: 0;
-  font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
 }
 
 .split-screen {
-  display: flex;
+    display: flex;
 }
 
 .left {
-  background-image: url("https://cdn.wallpapersafari.com/37/88/J4zjBf.jpg");
+    background-image: url("https://cdn.wallpapersafari.com/37/88/J4zjBf.jpg");
 }
+
 .left,
 .right {
-  width: 50%;
-  height: 100vh;
+    width: 50%;
+    height: 100vh;
 }
 
 .left {
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
+
 .i.far .fa-eye {
-  cursor: pointer;
+    cursor: pointer;
 }
+
 .right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: hsl(236, 45%, 42%);
-  color: hsl(268, 47%, 85%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(236, 45%, 42%);
+    color: hsl(268, 47%, 85%);
 }
+
 .registerform {
-  background-color: hsl(236, 45%, 42%);
+    background-color: hsl(236, 45%, 42%);
 }
 
 .right h1 {
-  margin-bottom: 50px;
-  text-align: center;
+    margin-bottom: 50px;
+    text-align: center;
 }
+
 .registerform input[type="text"],
 .registerform input[type="email"],
 .registerform input[type="password"],
 .registerform input[type="number"] {
-  display: block;
-  box-sizing: border-box;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border-radius: 15px;
-  width: 100%;
-  padding: 10px;
-  border: 1px solid hsl(236, 45%, 42%);
+    display: block;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid hsl(236, 45%, 42%);
 }
 
 .signinbtn {
-  width: 100%;
-  margin-top: 15px;
-  border-radius: 25px;
-  padding: 6px;
-  cursor: pointer;
-  background-image: linear-gradient(to right, #001a5c, #262e86, #ac73d6);
-
-  border: 1px solid white;
-  color: white;
-  height: 40px;
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 25px;
+    padding: 6px;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #001a5c, #262e86, #ac73d6);
+    border: 1px solid white;
+    color: white;
+    height: 40px;
 }
 
 .signinbtn:hover {
-  background-image: linear-gradient(to right, #852d91, #a3a1ff);
-  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+    background-image: linear-gradient(to right, #852d91, #a3a1ff);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
 }
 
 .legal {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .noSpace {
-  margin-bottom: 0;
-  padding-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .fw-bold {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .delButton {
-  display: inline;
-  float: right;
-  right: 0;
-  position: absolute;
-  background-color: transparent;
-  border: 0;
-  color: white;
-  font-size: 16px;
+    display: inline;
+    float: right;
+    right: 0;
+    position: absolute;
+    background-color: transparent;
+    border: 0;
+    color: white;
+    font-size: 16px;
 }
 
 .delButton:hover {
-  color: red;
-  cursor: pointer;
+    color: red;
+    cursor: pointer;
+}
+
+table#accounts {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.404);
+    border-collapse: collapse;
+    overflow-y: scroll;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+table#accounts>td {
+    padding: 15px;
+}
+
+td.noAccounts {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 15px;
+}
+
+.editAccount {
+    border: 0;
+    background-color: transparent;
+    font-size: 22px;
+    color: orangered;
+    cursor: pointer;
+}
+
+.deleteAccount {
+    border: 0;
+    background-color: transparent;
+    font-size: 22px;
+    color: darkred;
+    cursor: pointer;
+    margin-left: 5px;
 }
 
 @media (max-width: 500px) {
-  .split-screen {
-    flex-direction: column;
-  }
-  .left,
-  .right {
-    width: 100%;
-    height: 100%;
-    min-height: 50vh;
-  }
-  .registerform {
-    max-width: 50%;
-    height: 100%;
-  }
+    .split-screen {
+        flex-direction: column;
+    }
+    .left,
+    .right {
+        width: 100%;
+        height: 100%;
+        min-height: 50vh;
+    }
+    .registerform {
+        max-width: 50%;
+        height: 100%;
+    }
 }
 
+
 /*styling voor eye and eye slash*/
+
 i.fas.fa-eye,
 i.fas.fa-eye-slash {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 #hide {
-  display: none;
+    display: none;
 }
+
 
 /* styling voor de messages */
 
-.errorMessage{
-  height: 30px;
-  width: 200px;
-  background: white;
-  border: solid red;
-  border-radius: 5%;
-  text-align: center;
-  color: black;
-  margin-bottom: 10px;
+.errorMessage {
+    height: 30px;
+    width: 200px;
+    background: red;
+    border: solid red;
+    border-radius: 25px;
+    text-align: center;
+    color: black;
+    margin-bottom: 10px;
 }
-.succesMessage{
-  height: 30px;
-  width: 200px;
-  background: white;
-  border: solid green;
-  border-radius: 5%;
-  text-align: center;
-  color: black;
-  margin-bottom: 10px;
+
+.succesMessage {
+    height: 30px;
+    width: 200px;
+    background: green;
+    border: solid green;
+    border-radius: 25px;
+    text-align: center;
+    color: black;
+    margin-bottom: 10px;
 }
