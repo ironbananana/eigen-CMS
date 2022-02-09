@@ -22,7 +22,7 @@ require_once 'includes/db_conn.php';
       <span class="bar"></span>
     </a>
     <div class="navbar_links" id="navbar_links">
-      <ul class="navlist">
+      <ul class="navlist" id="navlist">
         <li><a href="#home">Home</a></li>
         <li><a href="#About">About</a></li>
         <li><a id="addMessage">Bericht +</a></li>
