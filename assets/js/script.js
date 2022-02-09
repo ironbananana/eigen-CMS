@@ -16,9 +16,12 @@ function passwordFunction() {
 function hamburgerFunction() {
   // function for the hamburger menu
   var x = document.getElementById("navbar_links");
+  var y = document.getElementsByClassName("topnav")[0];
   if (x.style.display === "block") {
     x.style.display = "none";
+    y.style.height = "60%";
   } else {
     x.style.display = "block";
+    y.style.height = "100%";
   }
 }
