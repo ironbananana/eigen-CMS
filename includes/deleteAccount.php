@@ -31,6 +31,6 @@ if (isset($_GET['id'])) {
     header('Location: /adminpanel?success=accountverwijderd');
     exit();
 } else {
-    header('Location: /index?error=verkeerdemethod');
+    header('Location: /inlog?error=unknownmethod');
     exit();
 }

@@ -17,6 +17,24 @@ $config['titel'] = "Admin Panel";
 include_once 'includes/header.php';
 require_once 'includes/db_conn.php';
 
+if (isset($_GET['error'])) {
+
+    switch ($_GET['error']) {
+        case "nodelaccount":
+            $errorMessage = "Geen account gevonden om te verwijderen!";
+            break;
+    }
+}
+
+if (isset($_GET['success'])) {
+
+    switch ($_GET['success']) {
+        case "accountverwijderd":
+            $successMessage = "Account succesvol verwijderd!";
+            break;
+    }
+}
+
 ?>
 
 <body class="bodyBerichten2">

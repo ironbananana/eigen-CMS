@@ -12,6 +12,39 @@ $config['titel'] = "Berichten";
 include_once 'includes/header.php';
 require_once 'includes/db_conn.php';
 
+if (isset($_GET['error'])) {
+
+  switch ($_GET['error']) {
+      case "wwincorrect":
+          $errorMessage = "Het ingevulde wachtwoord is incorrect!";
+          break;
+      case "noormoreaccounts":
+          $errorMessage = "Er is geen account gevonden met het opgegeven emailadres!";
+          break;
+      case "unknownmethod":
+          $errorMessage = "Onbekende methode gevonden!";
+          break;
+      case "emailuserleeg":
+          $errorMessage = "Emailadres is leeg!";
+          break;
+      case "wwleeg":
+          $errorMessage = "Het opgegeven wachtwoord was leeg!";
+          break;
+      case "nietingelogd":
+          $errorMessage = "Je moet ingelogd zijn om die pagina te bekijken!";
+          break;
+  }
+}
+
+if (isset($_GET['success'])) {
+
+  switch ($_GET['success']) {
+      case "logout":
+          $successMessage = "U bent succesvol uitgelogd!";
+          break;
+  }
+}
+
 ?>
 
 <body class="bodyBerichten">

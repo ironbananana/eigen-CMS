@@ -5,10 +5,9 @@ session_start();
 $config['titel'] = "Inloggen";
 include_once 'includes/header.php';
 
-
 if (isset($_GET['error'])) {
 
-    switch($_GET['error']) {
+    switch ($_GET['error']) {
         case "wwincorrect":
             $errorMessage = "Het ingevulde wachtwoord is incorrect!";
             break;
@@ -18,16 +17,25 @@ if (isset($_GET['error'])) {
         case "unknownmethod":
             $errorMessage = "Onbekende methode gevonden!";
             break;
-    }  
+        case "emailuserleeg":
+            $errorMessage = "Emailadres is leeg!";
+            break;
+        case "wwleeg":
+            $errorMessage = "Het opgegeven wachtwoord was leeg!";
+            break;
+        case "nietingelogd":
+            $errorMessage = "Je moet ingelogd zijn om die pagina te bekijken!";
+            break;
+    }
 }
 
 if (isset($_GET['success'])) {
 
-    switch($_GET['success']) {
+    switch ($_GET['success']) {
         case "logout":
             $successMessage = "U bent succesvol uitgelogd!";
             break;
-    }  
+    }
 }
 
 ?>
@@ -46,20 +54,21 @@ if (isset($_GET['success'])) {
             <form method="post" action="/includes/checkLogin.php" class="registerform">
                 <h1>Sign in</h1>
 
-                <?php 
+                <?php
 
-                    if (isset($_GET['error'])) {
+                if (isset($_GET['error'])) {
 
                 ?>
                     <div class="errorMessage autoClose"><?php echo $errorMessage; ?> </div>
                 <?php
-                    } if (isset($_GET['success'])) {
-                ?> 
+                }
+                if (isset($_GET['success'])) {
+                ?>
                     <div class="succesMessage autoClose"><?php echo $successMessage; ?> </div>
 
                 <?php
-                    }
-                ?> 
+                }
+                ?>
 
 
                 <div class="input-container loginemail">
