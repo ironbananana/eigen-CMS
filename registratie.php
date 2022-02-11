@@ -50,15 +50,15 @@
 
                 <div class="input-container password">
                     <!--input password!-->
-                    <label for="password">Password</label>
-                    <input type="password" name="wachtwoord" placeholder="choose a strong password" required>
+                    <label for="password"  class="myInput">Password</label>
+                    <input type="password" name="wachtwoord" class="myInput" placeholder="choose a strong password" required>
                 </div>
 
                 <div class="input-container password">
                     <!--input password repeat!-->
-                    <label for="password repeat">Repeat password</label>
-                    <input type="password" name="wwrepeat" placeholder="reapeat password" required>
-                    <i class="fa fa-eye-slash"></i> <!-- can add functionality for user to show and hide password!-->
+                    <label for="password repeat" >Repeat password</label>
+                    <input type="password" name="wwrepeat" class="myInput" placeholder="reapeat password" required>
+                    <i class="fas fa-eye" id="show" onclick="passwordFunction()"></i> <!-- can add functionality for user to show and hide password!-->
                 </div>
                
 
