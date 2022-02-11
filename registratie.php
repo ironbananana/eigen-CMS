@@ -62,7 +62,7 @@ include_once 'includes/header.php';
                 <div class="input-container password">
                     <!--input password repeat!-->
                     <label for="password repeat">Repeat password</label>
-                    <input type="password" name="wwrepeat" class="myInput" placeholder="reapeat password" required>
+                    <input type="password" name="wwrepeat" class="myInput" placeholder="repeat password" required>
                     <i class="fas fa-eye" id="show" onclick="passwordFunction()"></i> <!-- can add functionality for user to show and hide password!-->
                 </div>
 
