@@ -1,16 +1,21 @@
-<?php 
+<?php
 
-  session_start();
+session_start();
 
-  $config['titel'] = "Registreren";
-  include_once 'includes/header.php';
+$config['titel'] = "Registreren";
+include_once 'includes/header.php';
 
-?> 
+?>
 
 <body class="signuppage">
 
     <div class="split-screen">
         <div class="left">
+
+            <div class="input-container cta">
+                <div class="errorMessage">Signup Failed</div>
+                <div class="succesMessage">Signup Succes</div>
+            </div>
             <!--leftside!-->
             <h1>NCTQ</h1>
             <p>Welcome to our social media platform!</p>
@@ -18,12 +23,12 @@
         <div class="right">
             <!--rightside!-->
             <form method="post" action="/includes/checkRegistratie.php" class="registerform">
-                
-                    <h1>Sign up</h1>
 
-                    <div class="errorMessage">Signup Failed</div>
-    <div class="succesMessage">Signup Succes</div>
-                
+                <h1>Sign up</h1>
+
+
+
+
                 <div class="input-container vnaam">
                     <!--input firstname!-->
                     <label for="vnaam">First Name</label>
@@ -50,26 +55,19 @@
 
                 <div class="input-container password">
                     <!--input password!-->
-                    <label for="password"  class="myInput">Password</label>
+                    <label for="password" class="myInput">Password</label>
                     <input type="password" name="wachtwoord" class="myInput" placeholder="choose a strong password" required>
                 </div>
 
                 <div class="input-container password">
                     <!--input password repeat!-->
-                    <label for="password repeat" >Repeat password</label>
+                    <label for="password repeat">Repeat password</label>
                     <input type="password" name="wwrepeat" class="myInput" placeholder="reapeat password" required>
                     <i class="fas fa-eye" id="show" onclick="passwordFunction()"></i> <!-- can add functionality for user to show and hide password!-->
                 </div>
-               
 
-                <div class="input-container cta">
-                    <!--checkbox for email updates!-->
-                    <label class="checkbox-container">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        Sign up for email updates.
-                    </label>
-                </div>
+
+
 
                 <button class="signinbtn" type="submit">
                     Sign up!
