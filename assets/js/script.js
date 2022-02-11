@@ -25,3 +25,9 @@ function hamburgerFunction() {
     y.style.height = "100%";
   }
 }
+
+function toggleAlert() {
+  $('.autoClose').hide('slow');
+}
+
+setTimeout(toggleAlert, 8000);

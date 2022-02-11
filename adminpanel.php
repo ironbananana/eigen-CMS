@@ -30,7 +30,7 @@ require_once 'includes/db_conn.php';
             <ul class="navlist" id="navlist">
                 <!-- <li><a href="#home">Home</a></li>
         <li><a href="#About">About</a></li> -->
-                <li><a id="addMessage"><i class="fa-solid fa-arrow-left-long"></i> Berichten</a></li>
+                <li><a href="/berichten"><i class="fa-solid fa-arrow-left-long"></i> Berichten</a></li>
                 <li><a href="/includes/logout.php" class="logoutbtn">Logout</a></li>
             </ul>
         </div>

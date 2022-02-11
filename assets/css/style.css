@@ -428,22 +428,23 @@ i.fas.fa-eye-slash {
 
 .errorMessage {
     height: 30px;
-    width: 200px;
+    width: 450px;
     background: red;
     border: solid red;
     border-radius: 25px;
     text-align: center;
-    color: black;
-    margin-bottom: 10px;
+    color: white;
+    font-weight: bold;
 }
 
 .succesMessage {
     height: 30px;
-    width: 200px;
+    width: 450px;
     background: green;
     border: solid green;
     border-radius: 25px;
     text-align: center;
-    color: black;
+    color: white;
     margin-bottom: 10px;
+    font-weight: bold;
 }

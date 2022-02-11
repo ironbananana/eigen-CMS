@@ -52,6 +52,6 @@
         }
         
     } else {
-        header('Location: /inlog?error=optyfengauw');
+        header('Location: /inlog?error=unknownmethod');
         exit();
     }

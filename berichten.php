@@ -3,10 +3,10 @@
 
 session_start();
 
-// if (!$_SESSION['loggedin']) {
-//header('Location: /inlog?error=nietingelogd');
-// exit();
-//}
+if (!$_SESSION['loggedin']) {
+  header('Location: /inlog?error=nietingelogd');
+  exit();
+}
 
 $config['titel'] = "Berichten";
 include_once 'includes/header.php';
@@ -50,7 +50,9 @@ require_once 'includes/db_conn.php';
       while ($row = mysqli_fetch_assoc($sql)) {
       ?>
         <div style="position: relative" class="nummerBericht">
-          <span class="viewMessage" data-id="<?= $row['ID'] ?>" data-authorID="<?= $row['AuthorID'] ?>" data-timestamp="<?= $row['Timestamp'] ?>" data-bericht="<?= $row['Bericht'] ?>" data-authorName="<?= $row['AuthorName'] ?>"><?= $row['ID'] ?> - Bericht | <?= $row['AuthorName'] ?> | <?= date('d-m-Y', $row['Timestamp']) ?> | <?= date('H:s', $row['Timestamp']) ?></span>
+          <span class="viewMessage" data-id="<?= $row['ID'] ?>" data-authorID="<?= $row['AuthorID'] ?>" data-timestamp="<?= $row['Timestamp'] ?>" data-bericht="<?= $row['Bericht'] ?>" data-authorName="<?= $row['AuthorName'] ?>">
+          Bericht van <?= $row['AuthorName'] ?> | <?= date('H:i:s', $row['Timestamp']) ?>
+          </span>
           <button class="delButton" data-id="<?= $row['ID'] ?>"><i class="fas fa-trash"></i></button>
         </div>
     <?php
@@ -85,7 +87,7 @@ require_once 'includes/db_conn.php';
           cancel: function() {},
           deleteButton: {
             text: 'Bericht verwijderen',
-            btnClass: 'btn-blue',
+            btnClass: 'btn-red',
             keys: ['enter'],
             action: function() {
 
