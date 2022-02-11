@@ -152,18 +152,18 @@ require_once 'includes/db_conn.php';
                 columnClass: 'col-md-4',
                 content: '<form action="/includes/updateAccounts.php" method="post">' +
                 '<label class="editLabel noSpace" for="voornaam"></label>' +
-                '<input type="text" value="'+voornaam+'" name="voornaam" class="editInput" />' +
+                '<input type="text" value="'+voornaam+'" name="voornaam" class="editInput form-control" />' +
                 '<label class="editLabel noSpace" for="achternaam"></label>' +
-                '<input type="text" value="'+achternaam+'" name="achternaam" class="editInput" />' +
+                '<input type="text" value="'+achternaam+'" name="achternaam" class="editInput form-control" />' +
                 '<label class="editLabel noSpace" for="emailadres"></label>' +
-                '<input type="text" value="'+emailadres+'" name="emailadres" class="editInput" />' +
+                '<input type="text" value="'+emailadres+'" name="emailadres" class="editInput form-control" />' +
                 '<label class="editLabel noSpace" for="telnummer"></label>' +
-                '<input type="number" value="'+telnummer+'" name="telnummer" class="editInput" />' +
-                '<select name="role">' +
+                '<input type="number" value="'+telnummer+'" name="telnummer" class="editInput form-control" />' +
+                '<select name="role" class="form-select mt-3 mb-3">' +
                 options +
                 '</select>' +
                 '<input type="hidden" value="'+userID+'" name="userid" />' +
-                '<button class="submitButton" type="submit">Account Updaten</button>' +
+                '<button class="submitButton ibutton2 w-100" type="submit">Account Updaten</button>' +
                 '</form>',
             });
 

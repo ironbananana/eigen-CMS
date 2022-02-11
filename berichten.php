@@ -31,6 +31,7 @@ require_once 'includes/db_conn.php';
         <?php } ?>
         <li><a href="/includes/logout.php" class="logoutbtn">Logout</a></li>
       </ul>
+
     </div>
   </div>
 
@@ -51,9 +52,11 @@ require_once 'includes/db_conn.php';
       ?>
         <div style="position: relative" class="nummerBericht">
           <span class="viewMessage" data-id="<?= $row['ID'] ?>" data-authorID="<?= $row['AuthorID'] ?>" data-timestamp="<?= $row['Timestamp'] ?>" data-bericht="<?= $row['Bericht'] ?>" data-authorName="<?= $row['AuthorName'] ?>">
-          Bericht van <?= $row['AuthorName'] ?> | <?= date('H:i:s', $row['Timestamp']) ?>
+            Bericht van <?= $row['AuthorName'] ?> | <?= date('H:i:s', $row['Timestamp']) ?>
           </span>
-          <button class="delButton" data-id="<?= $row['ID'] ?>"><i class="fas fa-trash"></i></button>
+          <?php if ($_SESSION['role'] == "ADMIN" || $row['AuthorID'] === $_SESSION['rowid']) { ?>
+            <button class="delButton" data-id="<?= $row['ID'] ?>"><i class="fas fa-trash"></i></button>
+          <?php } ?>
         </div>
     <?php
       }
@@ -110,9 +113,9 @@ require_once 'includes/db_conn.php';
         content: '' +
           '<form action="/includes/addMessage.php" method="post">' +
           '<p class="fw-bold noSpace">Bericht:</p>' +
-          '<textarea name="bericht" class="editMessage" rows="15" cols="100" ></textarea>' +
+          '<textarea name="bericht" class="editMessage w-100 form-control" rows="15" cols="100" ></textarea>' +
           '<br>' +
-          '<button type="submit" class="submitButton">Versturen</button>' +
+          '<button type="submit" class="submitButton btn fw-bold btn-block ibutton2 rounded w-100">Versturen</button>' +
           '</form>',
       });
 
@@ -173,12 +176,12 @@ require_once 'includes/db_conn.php';
         editorMode = true;
         titel = 'Bericht bekijken / bewerken';
         messageContent = "<form action='/includes/updateMessage.php' method='post'>";
-        messageContent += "<p class='fw-bold'>Bericht toegevoegd op:</p>";
+        messageContent += "<p class='fw-bold noSpace'>Bericht toegevoegd op:</p>";
         messageContent += "<p class=''>" + getTime(timestamp) + " " + getDate(timestamp) + "</p> </br>";
         messageContent += "<label class='fw-bold' for='bericht'>Bericht</label> <br>";
-        messageContent += "<textarea class='editMessage' name='bericht'>" + bericht + "</textarea>";
+        messageContent += "<textarea class='editMessage w100 form-control' rows='5' name='bericht'>" + bericht + "</textarea>";
         messageContent += "<br>"
-        messageContent += "<button type='submit' class='submitButton'>Bericht Updaten</button>";
+        messageContent += "<button type='submit' class='submitButton ibutton2 w-100'>Bericht Updaten</button>";
         messageContent += "<input type='hidden' name='messageID' value='" + messageID + "' />";
         messageContent += "</form>";
       } else {

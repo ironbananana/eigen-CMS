@@ -41,6 +41,7 @@ body.bodyBerichten2 {
     margin: 0;
     padding: 0;
     display: flex;
+    position: relative;
 }
 
 .navbar_links li {
@@ -222,6 +223,23 @@ hr {
     border-radius: 50px;
     transition: all 0.4s ease-in-out;
 }
+
+.ibutton2 {
+    border: 1px solid white;
+    background-image: linear-gradient( to right, #6253e1, #852d91, #a3a1ff, #f24645);
+    box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+    width: 10%;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    height: auto;
+    border: 0;
+    text-align: center;
+    background-size: 300% 100%;
+    border-radius: 5%
+}
+
 
 .ibutton:hover {
     background-image: linear-gradient(to right, #852d91, #a3a1ff);

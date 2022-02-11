@@ -22,9 +22,12 @@ if (isset($_GET['error'])) {
 }
 
 if (isset($_GET['success'])) {
-    if ($_GET['success'] == "logout") {
-        $successMessage = "U bent succesvol uitgelogd!";
-    } 
+
+    switch($_GET['success']) {
+        case "logout":
+            $successMessage = "U bent succesvol uitgelogd!";
+            break;
+    }  
 }
 
 ?>
